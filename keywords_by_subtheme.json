@@ -1,0 +1,94 @@
+{
+  "Quantum-Inspired Metaheuristics (Core): Nature-inspired algorithms leveraging quantum computing principles": {
+    "Quantum-inspired evolutionary algorithms": [
+      "quantum evolutionary algorithm",
+      "qea performance analysis",
+      "quantum inspired genetic",
+      "evolutionary quantum computation",
+      "quantum inspired optimization"
+    ],
+    "Quantum-inspired particle swarm optimization": [
+      "quantum particle swarm algorithm",
+      "qPSO convergence analysis",
+      "quantum inspired PSO",
+      "particle swarm quantum computation",
+      "hybrid quantum PSO"
+    ],
+    "Quantum-inspired simulated annealing": [
+      "quantum simulated annealing",
+      "quantum annealing optimization",
+      "quantum annealing algorithm",
+      "simulated quantum annealing",
+      "quantum inspired SA"
+    ]
+  },
+  "Combinatorial Optimization (Core): Finding optimal solutions from a discrete set": {
+    "Approximation Algorithms": [
+      "combinatorial optimization approximation",
+      "approximation ratio combinatorial",
+      "PTAS combinatorial optimization",
+      "LP rounding combinatorial",
+      "combinatorial optimization heuristics"
+    ],
+    "Polyhedral Combinatorics": [
+      "combinatorial optimization polyhedra",
+      "integer programming polyhedral",
+      "cutting planes combinatorial",
+      "polyhedral relaxation combinatorial",
+      "combinatorial optimization facets"
+    ],
+    "Constraint Programming": [
+      "combinatorial optimization constraint",
+      "constraint programming search",
+      "global constraints combinatorial",
+      "CP combinatorial optimization",
+      "constraint propagation optimization"
+    ]
+  },
+  "Classical Metaheuristics (Adjacent): Approximation algorithms for computationally hard optimization problems": {
+    "Hybrid metaheuristics and approximation algorithms": [
+      "Metaheuristic approximation hybrid algorithm",
+      "Approximation algorithm metaheuristic combination",
+      "Hybrid metaheuristic performance approximation",
+      "Approximation metaheuristic synergy",
+      "Integrated metaheuristic approximation"
+    ],
+    "Theoretical analysis of metaheuristic performance guarantees": [
+      "Metaheuristic approximation theoretical bound",
+      "Approximation ratio metaheuristic analysis",
+      "Performance guarantee metaheuristic approximation",
+      "Approximation algorithm convergence metaheuristic",
+      "Metaheuristic approximation worst-case analysis"
+    ],
+    "Parameter tuning and adaptive metaheuristics for approximation": [
+      "Adaptive metaheuristic approximation parameter",
+      "Approximation algorithm parameter optimization",
+      "Metaheuristic self-tuning approximation",
+      "Parameter control metaheuristic approximation",
+      "Approximation algorithm online adaptation"
+    ]
+  },
+  "Quantum Annealing Algorithms (Emerging): Quantum computing paradigm for finding global minimum": {
+    "Quantum annealing hardware development": [
+      "quantum annealing qubit design",
+      "superconducting quantum annealer",
+      "flux qubit annealing hardware",
+      "quantum annealing fabrication challenges",
+      "cryogenic control quantum annealing"
+    ],
+    "Quantum annealing applications in optimization": [
+      "quantum annealing combinatorial optimization",
+      "quantum annealing portfolio optimization",
+      "quantum annealing machine learning",
+      "quantum annealing supply chain",
+      "quantum annealing materials discovery"
+    ],
+    "Quantum annealing performance analysis and benchmarking": [
+      "quantum annealing scaling behavior",
+      "quantum annealing advantage assessment",
+      "quantum annealing classical comparison",
+      "quantum annealing error mitigation",
+      "simulated quantum annealing benchmark"
+    ]
+  }
+}
