@@ -4,6 +4,7 @@ from typing import Dict
 import torch
 import numpy as np
 from transformers import AutoTokenizer, AutoModel
+import hashlib
 
 # 1. Load once at import time
 MODEL_NAME = "allenai/scibert_scivocab_uncased"
@@ -20,7 +21,8 @@ def embed_text(text: str, use_cache: bool = True) -> np.ndarray:
     Mean-pools the last hidden layer over all tokens.
     """
     # 2. Cache key — you can also key by DOI if embedding papers
-    key = str(hash(text))
+    # Use a stable hash to ensure cache keys remain consistent across runs
+    key = hashlib.sha256(text.encode("utf-8")).hexdigest()
     if use_cache and key in _embed_cache:
         return _embed_cache[key]
 
