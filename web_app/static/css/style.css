@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #F8F8F8;
+    --text-primary: #2A2A2A;
+    --text-secondary: #6B6B6B;
+    --accent-blue: #4A90E2;
+    --accent-mint: #50E3C2;
+    --cta-color: #FF5E57;
+    --hover-color: #FF3B30;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"],
+button {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+button, input[type="submit"] {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-mint));
+    transition: background 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(135deg, var(--cta-color), var(--hover-color));
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th {
+    background-color: var(--accent-blue);
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}

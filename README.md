@@ -246,6 +246,18 @@ Follow the prompts to enter:
 2. Publication year cutoff
 3. (Optional) Citation style
 
+### Local Web Application
+You can also run the pipeline through a small Flask web interface. The UI is styled with a modern "chatbot" look using the Inter font and a soft blue/mint gradient:
+
+```bash
+export FLASK_APP=web_app/app.py
+flask run
+```
+
+Open `http://localhost:5000` in your browser and submit the form with your
+research title, cutoff year and citation style. The top Focused and Exploratory
+papers will be displayed in the results page.
+
 ## 🔍 Troubleshooting
 - `API Key Issues`: Ensure your Gemini API key is correctly set in the .env file
   - Be informed that we recommended you use the .env keys as uploaded in this repo. We used two API clients with round-robin substitution system to handle rate limit exhaustion.

@@ -102,21 +102,8 @@ def prompt_cutoff_year() -> int:
 
 # --- Main Pipeline Orchestration ---
 
-def main():
-    """
-    Main function to orchestrate the AI-powered literature curation pipeline.
-    It handles user input, keyword generation, paper collection, filtering,
-    ranking, term generation, and categorization of papers.
-    """
-    # --- 1. User Input Collection ---
-    if len(sys.argv) > 1:
-        title = " ".join(sys.argv[1:]) # Get research title from command-line arguments
-    else:
-        title = input("Enter research title: ") # Prompt for title if no CLI argument is provided
-
-    cutoff_year = prompt_cutoff_year() # Get the publication year cutoff from the user
-    citation_style = input("Enter citation style (e.g. APA): ").strip()
-    print(f"Processing title: '{title}', for papers published from {cutoff_year} onwards.")
+def run_pipeline(title: str, cutoff_year: int, citation_style: str):
+    """Run the paper collection and ranking pipeline and return results."""
 
     # Start timing the main pipeline operations
     pipeline_start_time = time.time()
@@ -429,6 +416,26 @@ def main():
     # Log total elapsed time for the entire pipeline
     pipeline_elapsed_time = time.time() - pipeline_start_time
     print(f"\n⏱️  Total pipeline execution time: {pipeline_elapsed_time:.2f} seconds ({pipeline_elapsed_time/60:.2f} minutes).\n")
+
+    return {
+        "focused": final_focused_papers,
+        "exploratory": final_exploratory_papers,
+    }
+
+
+def main():
+    """CLI entry point for the pipeline."""
+    if len(sys.argv) > 1:
+        title = " ".join(sys.argv[1:])
+    else:
+        title = input("Enter research title: ")
+
+    cutoff_year = prompt_cutoff_year()
+    citation_style = input("Enter citation style (e.g. APA): ").strip()
+    print(f"Processing title: '{title}', for papers published from {cutoff_year} onwards.")
+
+    run_pipeline(title, cutoff_year, citation_style)
+
 
 if __name__ == "__main__":
     main()
