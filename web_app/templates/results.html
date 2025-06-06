@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Results for "{{ title }}"</h1>
+<h2>Focused Papers</h2>
+<table>
+    <tr><th>#</th><th>Title</th><th>Year</th><th>Score</th><th>DOI</th></tr>
+    {% for p in results.focused %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.year }}</td>
+        <td>{{ '%.4f'|format(p.score) }}</td>
+        <td>{{ p.doi }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2>Exploratory Papers</h2>
+<table>
+    <tr><th>#</th><th>Title</th><th>Year</th><th>Score</th><th>DOI</th></tr>
+    {% for p in results.exploratory %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.year }}</td>
+        <td>{{ '%.4f'|format(p.score) }}</td>
+        <td>{{ p.doi }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p><a href="/">&#8592; Start Another Search</a></p>
+{% endblock %}
