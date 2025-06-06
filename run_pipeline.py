@@ -325,8 +325,8 @@ def main():
     print("\nRanking all collected papers semantically using SciBERT...")
     # Use the initially filtered papers for ranking
     semantically_ranked_papers: List[Dict] = semantic_rank_papers(
-        query_title=loaded_query_title, 
-        papers=papers_after_initial_filters, 
+        query=loaded_query_title,
+        papers=papers_after_initial_filters,
         top_n=len(papers_after_initial_filters) # Rank all available papers
     )
     
